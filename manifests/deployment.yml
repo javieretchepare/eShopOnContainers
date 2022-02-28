@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: javieretchepareeshoponcontainers 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: javieretchepareeshoponcontainers
+  template:
+    metadata:
+      labels:
+        app: javieretchepareeshoponcontainers 
+    spec:
+      containers:
+        - name: javieretchepareeshoponcontainers 
+          image: azakshandsonacr.azurecr.io/javieretchepareeshoponcontainers
+          ports:
+          - containerPort: 80
